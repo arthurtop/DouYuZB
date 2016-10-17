@@ -28,10 +28,9 @@
         <scene sceneID="ZGd-nt-YTy">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qNd-QG-V0Q" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="我的" id="wSe-q2-TIk"/>
+                    <tabBarItem key="tabBarItem" title="我的" image="btn_user_normal" selectedImage="btn_user_selected" id="wSe-q2-TIk"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4_7.fullscreen"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dZb-hH-wF6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -46,4 +45,8 @@
             <point key="canvasLocation" x="-548" y="887"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="btn_user_normal" width="24" height="24"/>
+        <image name="btn_user_selected" width="24" height="24"/>
+    </resources>
 </document>

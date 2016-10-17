@@ -5,10 +5,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="4zi-L0-4wK">
             <objects>
-                <viewController id="QAQ-2w-9sl" sceneMemberID="viewController">
+                <viewController id="QAQ-2w-9sl" customClass="HomeViewController" customModule="DouYuZB" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mIj-Vy-vaI"/>
                         <viewControllerLayoutGuide type="bottom" id="Voh-Bf-tj0"/>
@@ -28,10 +28,9 @@
         <scene sceneID="zTw-QW-42B">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yIl-lc-loc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="首页" id="iy8-Tg-O3L"/>
+                    <tabBarItem key="tabBarItem" title="首页" image="btn_home_normal" selectedImage="btn_home_selected" id="iy8-Tg-O3L"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4_7.fullscreen"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gkZ-yc-QfG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -46,4 +45,8 @@
             <point key="canvasLocation" x="-548" y="-1081"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="btn_home_normal" width="24" height="24"/>
+        <image name="btn_home_selected" width="24" height="24"/>
+    </resources>
 </document>
