@@ -21,6 +21,11 @@
 		5E7A421B1D9C2F97006BB1BC /* Podfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E7A421A1D9C2F97006BB1BC /* Podfile.storyboard */; };
 		5E7A42211D9C351C006BB1BC /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7A42201D9C351C006BB1BC /* MainTabBarController.swift */; };
 		5E7A42231D9C378B006BB1BC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7A42221D9C378B006BB1BC /* HomeViewController.swift */; };
+		5EAA68E11DB7AA1000633D42 /* RecommViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAA68E01DB7AA1000633D42 /* RecommViewModel.swift */; };
+		5EAA68E31DB7ACFE00633D42 /* Data-Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAA68E21DB7ACFE00633D42 /* Data-Extention.swift */; };
+		5EAA68E51DB7B04B00633D42 /* AnchorGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAA68E41DB7B04B00633D42 /* AnchorGroup.swift */; };
+		5EAA68E71DB7B43D00633D42 /* AnchorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAA68E61DB7B43D00633D42 /* AnchorModel.swift */; };
+		5EAA68E91DB7C78E00633D42 /* Date-Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAA68E81DB7C78E00633D42 /* Date-Extention.swift */; };
 		5EC4745A1DABE54900E4DB74 /* UIBarButtonItem-Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC474591DABE54900E4DB74 /* UIBarButtonItem-Extention.swift */; };
 		5EC4745D1DABECF700E4DB74 /* PageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC4745C1DABECF700E4DB74 /* PageTitleView.swift */; };
 		5EC4745F1DABEEC700E4DB74 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC4745E1DABEEC700E4DB74 /* Common.swift */; };
@@ -77,6 +82,11 @@
 		5E7A421A1D9C2F97006BB1BC /* Podfile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Podfile.storyboard; path = ../../Main/Podfile.storyboard; sourceTree = "<group>"; };
 		5E7A42201D9C351C006BB1BC /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		5E7A42221D9C378B006BB1BC /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		5EAA68E01DB7AA1000633D42 /* RecommViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommViewModel.swift; sourceTree = "<group>"; };
+		5EAA68E21DB7ACFE00633D42 /* Data-Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data-Extention.swift"; sourceTree = "<group>"; };
+		5EAA68E41DB7B04B00633D42 /* AnchorGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnchorGroup.swift; sourceTree = "<group>"; };
+		5EAA68E61DB7B43D00633D42 /* AnchorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnchorModel.swift; sourceTree = "<group>"; };
+		5EAA68E81DB7C78E00633D42 /* Date-Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date-Extention.swift"; sourceTree = "<group>"; };
 		5EC474591DABE54900E4DB74 /* UIBarButtonItem-Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem-Extention.swift"; sourceTree = "<group>"; };
 		5EC4745C1DABECF700E4DB74 /* PageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageTitleView.swift; sourceTree = "<group>"; };
 		5EC4745E1DABEEC700E4DB74 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
@@ -193,8 +203,8 @@
 		5E000EAC1D9C254800684BB9 /* Follow */ = {
 			isa = PBXGroup;
 			children = (
+				5EAA68DC1DB7A95500633D42 /* VIewModel */,
 				5E000EAD1D9C254800684BB9 /* Controller */,
-				5E7A42171D9C2F5B006BB1BC /* Follow.storyboard */,
 				5E000EAE1D9C254800684BB9 /* Model */,
 				5E000EAF1D9C254800684BB9 /* View */,
 			);
@@ -204,6 +214,7 @@
 		5E000EAD1D9C254800684BB9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				5E7A42171D9C2F5B006BB1BC /* Follow.storyboard */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -225,6 +236,7 @@
 		5E000EB01D9C254800684BB9 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				5EAA68DB1DB7A93B00633D42 /* VIewModel */,
 				5E000EB11D9C254800684BB9 /* Controller */,
 				5E000EB21D9C254800684BB9 /* Model */,
 				5E000EB31D9C254800684BB9 /* View */,
@@ -261,6 +273,7 @@
 		5E000EB41D9C254800684BB9 /* Live */ = {
 			isa = PBXGroup;
 			children = (
+				5EAA68DD1DB7A96900633D42 /* VIewModel */,
 				5E000EB51D9C254800684BB9 /* Controller */,
 				5E000EB61D9C254800684BB9 /* Model */,
 				5E000EB71D9C254800684BB9 /* View */,
@@ -293,6 +306,7 @@
 		5E000EB81D9C254800684BB9 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				5EAA68DF1DB7A9A900633D42 /* VIewModel */,
 				5E000EB91D9C254800684BB9 /* Controller */,
 				5E000EBA1D9C254800684BB9 /* Model */,
 				5E000EBB1D9C254800684BB9 /* View */,
@@ -312,6 +326,8 @@
 		5E000EBA1D9C254800684BB9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5EAA68E41DB7B04B00633D42 /* AnchorGroup.swift */,
+				5EAA68E61DB7B43D00633D42 /* AnchorModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -327,6 +343,7 @@
 		5E000EBC1D9C254800684BB9 /* Podfile */ = {
 			isa = PBXGroup;
 			children = (
+				5EAA68DE1DB7A97600633D42 /* VIewModel */,
 				5E000EBD1D9C254800684BB9 /* Controller */,
 				5E000EBE1D9C254800684BB9 /* Model */,
 				5E000EBF1D9C254800684BB9 /* View */,
@@ -366,11 +383,49 @@
 			path = Tools;
 			sourceTree = "<group>";
 		};
+		5EAA68DB1DB7A93B00633D42 /* VIewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5EAA68E01DB7AA1000633D42 /* RecommViewModel.swift */,
+			);
+			path = VIewModel;
+			sourceTree = "<group>";
+		};
+		5EAA68DC1DB7A95500633D42 /* VIewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VIewModel;
+			sourceTree = "<group>";
+		};
+		5EAA68DD1DB7A96900633D42 /* VIewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VIewModel;
+			sourceTree = "<group>";
+		};
+		5EAA68DE1DB7A97600633D42 /* VIewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VIewModel;
+			sourceTree = "<group>";
+		};
+		5EAA68DF1DB7A9A900633D42 /* VIewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VIewModel;
+			sourceTree = "<group>";
+		};
 		5EC474581DABE4CD00E4DB74 /* Extention_system */ = {
 			isa = PBXGroup;
 			children = (
 				5EC474591DABE54900E4DB74 /* UIBarButtonItem-Extention.swift */,
 				5EC474621DAC5C9900E4DB74 /* UIColor-Extention.swift */,
+				5EAA68E21DB7ACFE00633D42 /* Data-Extention.swift */,
+				5EAA68E81DB7C78E00633D42 /* Date-Extention.swift */,
 			);
 			path = Extention_system;
 			sourceTree = "<group>";
@@ -716,16 +771,21 @@
 				5EC4747D1DAFEC2300E4DB74 /* AlamoHttpTools.swift in Sources */,
 				5E000E761D9C195500684BB9 /* AppDelegate.swift in Sources */,
 				5E7A42211D9C351C006BB1BC /* MainTabBarController.swift in Sources */,
+				5EAA68E11DB7AA1000633D42 /* RecommViewModel.swift in Sources */,
+				5EAA68E51DB7B04B00633D42 /* AnchorGroup.swift in Sources */,
 				5EC474651DADAD8100E4DB74 /* RecommendViewController.swift in Sources */,
 				5EC474631DAC5C9900E4DB74 /* UIColor-Extention.swift in Sources */,
 				5EC474881DB11A0E00E4DB74 /* CollectReusHeaderView.swift in Sources */,
 				5EC4745D1DABECF700E4DB74 /* PageTitleView.swift in Sources */,
+				5EAA68E31DB7ACFE00633D42 /* Data-Extention.swift in Sources */,
 				5EC474611DAC592D00E4DB74 /* PageContentView.swift in Sources */,
 				5E7A42231D9C378B006BB1BC /* HomeViewController.swift in Sources */,
 				5EC4745F1DABEEC700E4DB74 /* Common.swift in Sources */,
 				5EC474841DB1176400E4DB74 /* CollectionPrettyCell.swift in Sources */,
+				5EAA68E91DB7C78E00633D42 /* Date-Extention.swift in Sources */,
 				5EC474801DB1174C00E4DB74 /* CollectionNormalCell.swift in Sources */,
 				5EC4745A1DABE54900E4DB74 /* UIBarButtonItem-Extention.swift in Sources */,
+				5EAA68E71DB7B43D00633D42 /* AnchorModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -793,7 +853,7 @@
 				5E7A42181D9C2F5B006BB1BC /* Base */,
 			);
 			name = Follow.storyboard;
-			path = ../Main;
+			path = ../../Main;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

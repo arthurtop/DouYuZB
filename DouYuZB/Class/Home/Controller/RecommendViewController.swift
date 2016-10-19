@@ -19,7 +19,10 @@ fileprivate let kCollectPrttyId = "kCollectPrttyId"
 fileprivate let kCollectHeaderID = "headerID"
 
 class RecommendViewController: UIViewController {
-
+    
+    // MARK: -- 懒加载属性
+    fileprivate lazy var recommVM : RecommViewModel = RecommViewModel()
+    
     fileprivate lazy var collectView: UICollectionView = {[unowned self] in
         
         let layout = UICollectionViewFlowLayout()
@@ -55,8 +58,8 @@ class RecommendViewController: UIViewController {
         
         collectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
-        
-        
+        ///发送网络请求
+        loadData()
         
     }
 
@@ -64,6 +67,18 @@ class RecommendViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+}
+
+
+// MARK: -- 请求数据
+extension RecommendViewController {
+    fileprivate func loadData() {
+        
+        recommVM.requestData { 
+            self.collectView.reloadData()
+        }
+        
     }
 }
 
@@ -82,14 +97,12 @@ extension RecommendViewController {
 extension RecommendViewController : UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if section == 0 {
-            return 8
-        }
-        return 4
+        let group = recommVM.anchorGroup[section]
+        return group.anchors.count
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 12
+        return recommVM.anchorGroup.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -106,7 +119,9 @@ extension RecommendViewController : UICollectionViewDataSource, UICollectionView
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
-        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kCollectHeaderID, for: indexPath)
+        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kCollectHeaderID, for: indexPath) as! CollectReusHeaderView
+        
+        headerView.group = recommVM.anchorGroup[indexPath.section]
         
         return headerView
     }
