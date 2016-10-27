@@ -13,6 +13,9 @@ fileprivate let kItemW = (kScreenW - 3*kItemMargin) / 2
 fileprivate let kItemH = kItemW * 3 / 4
 fileprivate let kItemPrttyH = kItemW * 4 / 3
 fileprivate let kHeaderViewH : CGFloat = 50
+fileprivate let kCycleViewH = kScreenW * 3 / 8
+fileprivate let kGameViewH: CGFloat = 90
+
 
 fileprivate let kCollectCellID = "collectCell"
 fileprivate let kCollectPrttyId = "kCollectPrttyId"
@@ -22,6 +25,12 @@ class RecommendViewController: UIViewController {
     
     // MARK: -- 懒加载属性
     fileprivate lazy var recommVM : RecommViewModel = RecommViewModel()
+    
+    fileprivate lazy var gameView : RecommendGameView = {
+        let gameView = RecommendGameView.recommendGameView()
+        gameView.frame = CGRect(x: 0, y: -kGameViewH, width: kScreenW, height: kGameViewH)
+        return gameView
+    }()
     
     fileprivate lazy var collectView: UICollectionView = {[unowned self] in
         
@@ -48,6 +57,14 @@ class RecommendViewController: UIViewController {
         return collectionView
     }()
     
+    fileprivate lazy var cycleView: RecommendCycleView = {
+        
+        let cycleView = RecommendCycleView.recommendCycleView()
+        
+        cycleView.frame = CGRect(x: 0, y: -(kCycleViewH+kGameViewH), width: kScreenW, height: kCycleViewH)
+        
+        return cycleView
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,6 +94,13 @@ extension RecommendViewController {
         
         recommVM.requestData { 
             self.collectView.reloadData()
+            
+            ///将数据传递给gameView
+            self.gameView.groups = self.recommVM.anchorGroup
+        }
+        
+        recommVM.requestCycleData {
+            self.cycleView.cycleModels = self.recommVM.cycleModels
         }
         
     }
@@ -89,10 +113,23 @@ extension RecommendViewController {
         view.addSubview(collectView)
         
         
+        collectView.addSubview(cycleView)
+        
+        collectView.addSubview(gameView)
+        
+        ///设置collectionView的内边距
+        collectView.contentInset = UIEdgeInsets(top: kCycleViewH + kGameViewH, left: 0, bottom: 0, right: 0)
+        
+        
+        
+        
     }
     
     
+    
 }
+
+
 
 extension RecommendViewController : UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
@@ -107,12 +144,21 @@ extension RecommendViewController : UICollectionViewDataSource, UICollectionView
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        var cell = UICollectionViewCell()
+        let group = recommVM.anchorGroup[indexPath.section]
+        let anchor = group.anchors[indexPath.item]
+        
+        
+        var cell : CollectionBaseCell!
+        
+        
         if indexPath.section == 1 {
-            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kCollectPrttyId, for: indexPath)
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kCollectPrttyId, for: indexPath) as! CollectionPrettyCell
+            
         }else{
-            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kCollectCellID, for: indexPath)
+             cell = collectionView.dequeueReusableCell(withReuseIdentifier: kCollectCellID, for: indexPath) as! CollectionNormalCell
+            
         }
+        cell.anchor = anchor
         
         return cell
     }

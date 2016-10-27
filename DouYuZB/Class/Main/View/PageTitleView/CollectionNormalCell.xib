@@ -28,7 +28,7 @@
                             <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
                         </userDefinedRuntimeAttributes>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Img_default" translatesAutoresizingMaskIntoConstraints="NO" id="9k6-0H-I0z">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Img_default" translatesAutoresizingMaskIntoConstraints="NO" id="9k6-0H-I0z" customClass="colle">
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                 <integer key="value" value="5"/>
@@ -65,6 +65,12 @@
                 <constraint firstAttribute="trailing" secondItem="3Pv-rd-yj4" secondAttribute="trailing" constant="5" id="wRK-R1-nDE"/>
             </constraints>
             <size key="customSize" width="199" height="146"/>
+            <connections>
+                <outlet property="imageView" destination="9k6-0H-I0z" id="Rgd-G2-4QH"/>
+                <outlet property="nickNameLabel" destination="3Pv-rd-yj4" id="wXL-eF-0hc"/>
+                <outlet property="onlineBtn" destination="lhz-eY-EQg" id="BdY-9P-9sw"/>
+                <outlet property="roomNameLabel" destination="UfF-au-tRi" id="fU7-mC-8dE"/>
+            </connections>
             <point key="canvasLocation" x="99.5" y="4"/>
         </collectionViewCell>
     </objects>

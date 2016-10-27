@@ -158,8 +158,14 @@ extension PageTitleView {
     
     @objc fileprivate func titleLabelCilck(_ tapGes: UIGestureRecognizer) {
         print("----+++")
+
         //获取label的下标值
         guard let currentLabel = tapGes.view as? UILabel else {return}
+        
+        if currentLabel.tag == currentIndex {
+            return
+        }
+        
         
         //获取之前的 label
         let oldLabel = titleLabels[currentIndex]

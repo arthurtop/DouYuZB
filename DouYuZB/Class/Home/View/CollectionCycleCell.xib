@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CollectionCycleCell" customModule="DouYuZB" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="261" height="99"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="261" height="99"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Img_default" translatesAutoresizingMaskIntoConstraints="NO" id="54L-6e-oGu"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SVh-2u-qer">
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="小码哥it教育啊" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hyt-QD-236">
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="04x-Jb-8UZ"/>
+                            <constraint firstItem="hyt-QD-236" firstAttribute="centerY" secondItem="SVh-2u-qer" secondAttribute="centerY" id="Bhe-tw-MyG"/>
+                            <constraint firstItem="hyt-QD-236" firstAttribute="leading" secondItem="SVh-2u-qer" secondAttribute="leading" constant="10" id="D1C-l4-2Ql"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="SVh-2u-qer" secondAttribute="bottom" id="2Ko-mx-qto"/>
+                <constraint firstItem="SVh-2u-qer" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="QgQ-L2-qTW"/>
+                <constraint firstAttribute="trailing" secondItem="54L-6e-oGu" secondAttribute="trailing" id="URL-Tp-Jh4"/>
+                <constraint firstItem="54L-6e-oGu" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="cON-66-klI"/>
+                <constraint firstAttribute="bottom" secondItem="54L-6e-oGu" secondAttribute="bottom" id="eRm-ht-ERK"/>
+                <constraint firstAttribute="trailing" secondItem="SVh-2u-qer" secondAttribute="trailing" id="mAY-8v-4Y7"/>
+                <constraint firstItem="54L-6e-oGu" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ufh-7m-c05"/>
+            </constraints>
+            <size key="customSize" width="261" height="99"/>
+            <connections>
+                <outlet property="imageView" destination="54L-6e-oGu" id="agZ-cO-rqe"/>
+                <outlet property="titleLabel" destination="hyt-QD-236" id="tno-Dw-nVd"/>
+            </connections>
+            <point key="canvasLocation" x="-44.5" y="37.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Img_default" width="172" height="103"/>
+    </resources>
+</document>

@@ -5,6 +5,7 @@ target 'DouYuZB' do
   use_frameworks!
 
  pod 'Alamofire'
+ pod 'Kingfisher'
 
   target 'DouYuZBTests' do
     inherit! :search_paths
