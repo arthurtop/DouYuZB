@@ -24,6 +24,7 @@
 		5E080D651DC1010C00B5EF96 /* RecommendGameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E080D641DC1010C00B5EF96 /* RecommendGameView.xib */; };
 		5E080D681DC109BC00B5EF96 /* CollectionGameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E080D661DC109BC00B5EF96 /* CollectionGameCell.swift */; };
 		5E080D691DC109BC00B5EF96 /* CollectionGameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E080D671DC109BC00B5EF96 /* CollectionGameCell.xib */; };
+		5E080D981DC3AAAC00B5EF96 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E080D971DC3AAAC00B5EF96 /* GameViewController.swift */; };
 		5E7A42141D9C2ED3006BB1BC /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E7A42121D9C2ED3006BB1BC /* Home.storyboard */; };
 		5E7A42161D9C2EF8006BB1BC /* Live.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E7A42151D9C2EF8006BB1BC /* Live.storyboard */; };
 		5E7A42191D9C2F5B006BB1BC /* Follow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E7A42171D9C2F5B006BB1BC /* Follow.storyboard */; };
@@ -95,6 +96,7 @@
 		5E080D641DC1010C00B5EF96 /* RecommendGameView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendGameView.xib; sourceTree = "<group>"; };
 		5E080D661DC109BC00B5EF96 /* CollectionGameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionGameCell.swift; sourceTree = "<group>"; };
 		5E080D671DC109BC00B5EF96 /* CollectionGameCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionGameCell.xib; sourceTree = "<group>"; };
+		5E080D971DC3AAAC00B5EF96 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		5E7A42131D9C2ED3006BB1BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = DouYuZB/Base.lproj/Home.storyboard; sourceTree = SOURCE_ROOT; };
 		5E7A42151D9C2EF8006BB1BC /* Live.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Live.storyboard; path = ../../Main/Live.storyboard; sourceTree = "<group>"; };
 		5E7A42181D9C2F5B006BB1BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = DouYuZB/Base.lproj/Follow.storyboard; sourceTree = SOURCE_ROOT; };
@@ -270,6 +272,7 @@
 				5E7A42121D9C2ED3006BB1BC /* Home.storyboard */,
 				5E7A42221D9C378B006BB1BC /* HomeViewController.swift */,
 				5EC474641DADAD8100E4DB74 /* RecommendViewController.swift */,
+				5E080D971DC3AAAC00B5EF96 /* GameViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -807,6 +810,7 @@
 				5E7A42211D9C351C006BB1BC /* MainTabBarController.swift in Sources */,
 				5EAA68E11DB7AA1000633D42 /* RecommViewModel.swift in Sources */,
 				5E080D631DC100F900B5EF96 /* RecommendGameView.swift in Sources */,
+				5E080D981DC3AAAC00B5EF96 /* GameViewController.swift in Sources */,
 				5EAA68E51DB7B04B00633D42 /* AnchorGroup.swift in Sources */,
 				5EC474651DADAD8100E4DB74 /* RecommendViewController.swift in Sources */,
 				5E080D5D1DBA6A9000B5EF96 /* CycleModel.swift in Sources */,
