@@ -23,7 +23,7 @@ class AlamoHttpTools {
         Alamofire.request(URLString, method: method, parameters: parameters).responseJSON{ (response) in
             
             guard let result = response.result.value else {
-                print(response.result.error)
+                print(response.result.error ?? 0)
                 return
             }
             ///返回数据

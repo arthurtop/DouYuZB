@@ -88,6 +88,7 @@ extension HomeViewController {
         view.addSubview(pageContentView)
         pageContentView.backgroundColor = UIColor.purple
         
+        
     }
     
     

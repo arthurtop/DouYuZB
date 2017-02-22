@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AnchorGroup: NSObject {
+class AnchorGroup: BaseGameModel {
     
     var room_list: [[String : NSObject]]? {
         
@@ -24,7 +24,6 @@ class AnchorGroup: NSObject {
         
     }
     
-    var tag_name : String = ""
     
     var icon_name : String = "home_header_normal"
     
@@ -32,16 +31,9 @@ class AnchorGroup: NSObject {
     lazy var anchors : [AnchorModel] = [AnchorModel]()
     
     
-    override init() {
-        
-        
-    }
     
-    init(dict: [String : NSObject]) {
-        super.init()
-        
-        setValuesForKeys(dict)
-    }
+    
+   
     
     /*  ////不使用 didSet 可以使用这个方法添加
      override func setValue(_ value: Any?, forKey key: String) {
@@ -56,10 +48,6 @@ class AnchorGroup: NSObject {
      */
     
     
-    
-    
-    override func setValue(_ value: Any?, forUndefinedKey key: String) {
-    }
     
     
 }

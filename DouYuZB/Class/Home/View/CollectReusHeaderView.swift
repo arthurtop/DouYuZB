@@ -11,6 +11,7 @@ import UIKit
 class CollectReusHeaderView: UICollectionReusableView {
     
     
+    
     @IBOutlet weak var titleLabel: UILabel!
     
     @IBOutlet weak var imageView: UIImageView!
