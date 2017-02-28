@@ -6,6 +6,7 @@ target 'DouYuZB' do
 
  pod 'Alamofire'
  pod 'Kingfisher'
+ pod ‘SwiftyJSON’
 
   target 'DouYuZBTests' do
     inherit! :search_paths
